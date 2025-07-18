@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Cloud Architecture (AWS)</title>
+</head>
+<body>
+  <h1>Welcome to My Multi-Cloud Project</h1>
+  <p id="response">Fetching response from AWS Lambda...</p>
+
+  <script>
+    fetch("https://w1799pwe06.execute-api.eu-north-1.amazonaws.com/default/MultiCloudBackend")
+      .then(res => res.text())
+      .then(data => document.getElementById("response").innerText = data)
+      .catch(err => console.error("Error fetching from backend:", err));
+  </script>
+</body>
+</html>
